@@ -4,7 +4,7 @@
   "description": "API REST of Platzi Videos app",
   "main": "index.js",
   "scripts": {
-    "dev": "set DEBUG=app:*&& nodemon index",
+    "dev": "set DEBUG=app:* && nodemon index",
     "start": "NODE_ENV=production node index"
   },
   "repository": {
@@ -24,7 +24,8 @@
   "homepage": "https://github.com/DevGuicho/platzi-videos-api#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongodb": "^3.6.3"
   },
   "devDependencies": {
     "eslint": "^7.14.0",
