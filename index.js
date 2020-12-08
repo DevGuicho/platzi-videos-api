@@ -2,7 +2,6 @@ const express = require('express');
 const debug = require('debug')('app:server');
 const app = express();
 const cors = require('cors');
-
 const { config } = require('./config');
 const moviesApi = require('./routes/movies');
 const {
@@ -14,6 +13,9 @@ const {
 const notFounHandler = require('./utils/middleware/notFoundHandler');
 
 app.use(express.json());
+//PERIMITIR PETICIONES DE UN DOMINIO EN ESPECIFICO
+/* const corsOptions = { origin: 'http://example.com' };
+app.use(cors(corsOptions)); */
 app.use(cors());
 //Routes movies
 moviesApi(app);
