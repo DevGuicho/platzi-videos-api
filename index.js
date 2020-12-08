@@ -1,4 +1,5 @@
 const express = require('express');
+const debug = require('debug')('app:server');
 const app = express();
 const cors = require('cors');
 
@@ -13,7 +14,7 @@ const {
 const notFounHandler = require('./utils/middleware/notFoundHandler');
 
 app.use(express.json());
-app.use(cors);
+app.use(cors());
 //Routes movies
 moviesApi(app);
 
@@ -25,4 +26,4 @@ app.use(logErrors);
 app.use(wrapErrors);
 app.use(errorHandler);
 
-app.listen(config.port, () => console.log(`Server on port ${config.port}`));
+app.listen(config.port, () => debug(`Server on port ${config.port}`));

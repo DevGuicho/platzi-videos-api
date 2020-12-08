@@ -20,7 +20,7 @@ const moviesApi = (app) => {
       const movies = await moviesService.getMovies({ tags });
       res.status(200).json({
         data: movies,
-        message: 'Movies listed',
+        message: 'movies listed',
       });
     } catch (error) {
       next(error);
@@ -35,7 +35,7 @@ const moviesApi = (app) => {
         const movies = await moviesService.getMovie({ movieId });
         res.status(200).json({
           data: movies,
-          message: 'Movie retrieved',
+          message: 'movie retrieved',
         });
       } catch (error) {
         next(error);
