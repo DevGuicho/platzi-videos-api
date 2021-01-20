@@ -23,6 +23,7 @@ function wrapErrors(err, req, res, next) {
   next(err);
 }
 
+// eslint-disable-next-line no-unused-vars
 function errorHandler(err, req, res, next) {
   // eslint-disable-line
   const {

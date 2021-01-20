@@ -1,6 +1,6 @@
 {
   "name": "platzivideo",
-  "alias": ["movies-api"],
+  "alias": ["movies-api-devguicho"],
   "version": 2,
   "builds": [
     {
